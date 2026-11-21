@@ -1,5 +1,9 @@
 module tt_um_top_xornet (
     input wire [7:0] ui_in,
+    output wire [7:0] uo_out,   // Dedicated outputs
+    input  wire [7:0] uio_in,   // IOs: Input path
+    output wire [7:0] uio_out,  // IOs: Output path
+    output wire [7:0] uio_oe, 
     input wire x1,
     input wire x2,
     output wire led,
@@ -26,6 +30,8 @@ xornet neural_network (
 );
 
 assign led = ~(nn_out >= 16'd128);
+assign uio_out = 0;
+assign uio_oe  = 0;
 wire _unused = &{ena, clk, rst_n, 1'b0};
 
 endmodule
