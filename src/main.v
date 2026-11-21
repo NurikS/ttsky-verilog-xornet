@@ -1,4 +1,4 @@
-module top (
+module tt_um_top_xornet (
     input wire x1,
     input wire x2,
     output wire led
