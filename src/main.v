@@ -1,5 +1,5 @@
 module tt_um_top_xornet (
-    input  wire ui_in,
+    input wire [7:0] ui_in,
     input wire x1,
     input wire x2,
     output wire led,
